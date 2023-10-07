@@ -1,0 +1,24 @@
+#include<iostream>
+
+using namespace std;
+
+int main(){
+    int a,b,maxnum,flag=1;
+    cout<<"enter number a : ";
+    cin>>a;
+    cout<<"enter number b :";
+    cin>>b;
+    maxnum=(a>b)?a:b;
+    while (flag)
+    {
+        if (maxnum%a==0 && maxnum%b==0){
+            cout<<"LCM of the numbers "<<a<<" and "<<b<<" is: "<<maxnum; 
+            break;
+        }
+        maxnum++;
+    }
+    int gcd;
+    gcd=(a*b)/maxnum;
+    cout<<"\ngcd of "<<a<<" and "<<b<<" is: "<<gcd;
+    return 0;
+}
